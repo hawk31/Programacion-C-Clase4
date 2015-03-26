@@ -110,7 +110,7 @@ static int modify_car(GtkButton *widget, gpointer data)
 		return -1;
 	}
 
-	c = curso_concesionario_attr_get_coche(con, CURSO_CONCESIONARIO_ATTR_COCHE, pos);
+	c = curso_coche_alloc();
 	curso_coche_attr_set_str(c, CURSO_COCHE_ATTR_MATRICULA, matricula);
 	curso_coche_attr_set_str(c, CURSO_COCHE_ATTR_MARCA, marca);
 	curso_concesionario_attr_unset_coche(con, pos);	
